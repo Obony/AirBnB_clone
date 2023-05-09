@@ -277,5 +277,5 @@ $ python3 unittest -m tests/test_console.py
 ```
 
 ## Authors :black_nib:
-* **Faith Nyaberi** <[Obony] (https://github.com/Obony)>
-* **Abiollagh James** <[AbiollaghJames] (https://github.com/AbiollaghJames)>
+* **Faith Nyaberi** <[Obony](https://github.com/Obony)>
+* **Abiollagh James** <[AbiollaghJames](https://github.com/AbiollaghJames)>
