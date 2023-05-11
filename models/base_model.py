@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines the BaseModel class."""
-from models import storage
 from uuid import uuid4
 from datetime import datetime
 
@@ -23,6 +22,8 @@ class BaseModel:
             *args (any): Unused.
             **kwargs (dict): Key/value pairs of attributes.
         """
+        from models import storage
+
         dt_form = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
         self.created_at = datetime.now()
@@ -38,6 +39,8 @@ class BaseModel:
 
     def save(self):
         """Update updated_at with the current datetime."""
+        from models import storage
+
         self.updated_at = datetime.now()
         storage.save()
 
