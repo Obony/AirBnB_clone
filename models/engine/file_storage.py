@@ -6,14 +6,6 @@ Functions and classes:
     class FileStorage:
 """
 
-import json
-from models.base_model import BaseModel
-from models.user import User
-from models.amenity import Amenity
-from models.place import Place
-from models.city import City
-from models.review import Review
-from models.state import State
 
 class FileStorage:
     """serializes instances to a JSON file
@@ -35,6 +27,9 @@ class FileStorage:
 
     def save(self):
         """serializes __objects to the JSON file"""
+
+        from json import dump
+
         file_name = self.__file_path
 
         to_json = dict(self.__objects)
@@ -46,6 +41,16 @@ class FileStorage:
 
     def reload(self):
         """deserializes the JSON file to __objects"""
+
+        from json import load
+        from models.base_model import BaseModel
+        from models.user import User
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.city import City
+        from models.review import Review
+        from models.state import State
+
         file_name = self.__file_path
         try:
             with open(file_name, "r", encoding="UTF-8") as f:
