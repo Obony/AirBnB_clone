@@ -73,4 +73,4 @@ class FileStorage:
 
                 FileStorage.__objects = dict(from_json)
         except FileNotFoundError:
-            pass
+            return
